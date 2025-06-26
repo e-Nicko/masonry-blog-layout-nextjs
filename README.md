@@ -23,28 +23,35 @@ A beautiful, responsive masonry blog layout built with Next.js, featuring infini
 
 ### Prerequisites
 
-- Node.js 18+ 
+- Node.js 18+
 - npm or yarn
 
 ### Installation
 
 1. Clone the repository:
+
 ```bash
 git clone <repository-url>
 cd masonry-blog
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 ```
 
 3. Start the development server:
+
 ```bash
 npm run dev
 ```
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Documentation
+
+For a detailed explanation of how the masonry layout was implemented, please see the [**Masonry Implementation Guide**](./docs/masonry-implementation.md).
 
 ## Project Structure
 
@@ -71,21 +78,25 @@ src/
 ## Key Components
 
 ### MasonryGrid
+
 - CSS-based masonry layout using `column-count` and `column-gap`
 - Responsive design that adapts to different screen sizes
 - Smooth animations for item appearance
 
 ### ArticleCard
+
 - Individual article display with image, title, excerpt, and metadata
 - Hover effects and micro-interactions
 - Staged animations with staggered delays
 
 ### useInfiniteScroll Hook
+
 - Custom hook managing infinite scroll state
 - Intersection Observer for efficient scroll detection
 - Error handling and retry functionality
 
 ### BlogLayout
+
 - Main container managing article loading and display
 - Integration of masonry grid and infinite scroll
 - Loading states and error handling
@@ -102,14 +113,17 @@ The project features several types of animations:
 ## Customization
 
 ### Adding New Articles
+
 Modify `src/data/mockArticles.ts` to add new articles or change the data structure.
 
 ### Styling
+
 - Update `src/app/globals.css` for global styles
 - Modify Tailwind classes in components for styling changes
 - Adjust animation parameters in Framer Motion components
 
 ### Layout Configuration
+
 - Change masonry column width in `MasonryGrid` component
 - Adjust infinite scroll trigger distance in `useInfiniteScroll` hook
 - Modify responsive breakpoints in CSS
@@ -144,4 +158,3 @@ MIT License - feel free to use this project for your own purposes.
 - Images provided by Unsplash
 - Icons and animations inspired by modern design patterns
 - Built with the amazing Next.js and React ecosystem
-
