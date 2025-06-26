@@ -16,12 +16,12 @@ A a responsive masonry blog layout built with Next.js, featuring infinite scroll
 
 ## Features
 
-✨ **Adaptive Masonry Layout**: CSS-based masonry grid that automatically adjusts to different screen sizes
-🔄 **Infinite Scroll**: Seamless loading of more articles as you scroll down
-🎭 **Smooth Animations**: Staged animations for article appearance using Framer Motion
-📱 **Responsive Design**: Optimized for desktop, tablet, and mobile devices
-⚡ **Performance Optimized**: Efficient loading and rendering of articles
-🎨 **Modern UI**: Clean, professional design with hover effects and transitions
+- ✨ **Adaptive Masonry Layout**: CSS-based masonry grid that automatically adjusts to different screen sizes
+- 🔄 **Infinite Scroll**: Seamless loading of more articles as you scroll down
+- 🎭 **Smooth Animations**: Staged animations for article appearance using Framer Motion
+- 📱 **Responsive Design**: Optimized for desktop, tablet, and mobile devices
+- ⚡ **Performance Optimized**: Efficient loading and rendering of articles
+- 🎨 **Modern UI**: Clean, professional design with hover effects and transitions
 
 ## Tech Stack
 
