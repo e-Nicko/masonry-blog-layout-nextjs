@@ -1,6 +1,8 @@
+const isProd = process.env.NODE_ENV === 'production';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: '/masonry-blog-layout-nextjs',
+  basePath: isProd ? '/masonry-blog-layout-nextjs' : '',
   eslint: {
     ignoreDuringBuilds: true,
   },
