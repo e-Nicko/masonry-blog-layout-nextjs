@@ -1,6 +1,18 @@
-# Masonry Articles Blog
+# Masonry Articles Blog [boilerplate]
 
-A beautiful, responsive masonry blog layout built with Next.js, featuring infinite scroll and smooth animations powered by Framer Motion.
+[![GitHub Pages Deploy](https://img.shields.io/github/deployments/e-Nicko/masonry-blog-layout-nextjs/github-pages?label=deploy)](https://e-nicko.github.io/masonry-blog-layout-nextjs/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+<br>
+[![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)](https://www.framer.com/motion/)
+
+A a responsive masonry blog layout built with Next.js, featuring infinite scroll and smooth animations powered by Framer Motion.
+
+<a href="screenshot.png">
+<img src="screenshot.png" width="500px">
+</a>
 
 ## Features
 
@@ -66,7 +78,7 @@ src/
 │   ├── BlogLayout.tsx       # Main blog layout with infinite scroll
 │   ├── ErrorState.tsx       # Error and empty state components
 │   ├── LoadingAnimations.tsx # Various loading animation components
-│   └── MasonryGrid.tsx      # Masonry layout component
+│   └── ReactMasonryGrid.tsx # Masonry layout component
 ├── data/
 │   └── mockArticles.ts      # Mock article data generator
 ├── hooks/
@@ -77,25 +89,25 @@ src/
 
 ## Key Components
 
-### MasonryGrid
+### [`ReactMasonryGrid.tsx`](./src/components/ReactMasonryGrid.tsx)
 
 - CSS-based masonry layout using `column-count` and `column-gap`
 - Responsive design that adapts to different screen sizes
 - Smooth animations for item appearance
 
-### ArticleCard
+### [`ArticleCard.tsx`](./src/components/ArticleCard.tsx)
 
 - Individual article display with image, title, excerpt, and metadata
 - Hover effects and micro-interactions
 - Staged animations with staggered delays
 
-### useInfiniteScroll Hook
+### [`useInfiniteScroll.ts`](./src/hooks/useInfiniteScroll.ts)
 
 - Custom hook managing infinite scroll state
 - Intersection Observer for efficient scroll detection
 - Error handling and retry functionality
 
-### BlogLayout
+### [`BlogLayout.tsx`](./src/components/BlogLayout.tsx)
 
 - Main container managing article loading and display
 - Integration of masonry grid and infinite scroll
@@ -114,18 +126,18 @@ The project features several types of animations:
 
 ### Adding New Articles
 
-Modify `src/data/mockArticles.ts` to add new articles or change the data structure.
+Modify [`src/data/mockArticles.ts`](./src/data/mockArticles.ts) to add new articles or change the data structure.
 
 ### Styling
 
-- Update `src/app/globals.css` for global styles
+- Update [`src/app/globals.css`](./src/app/globals.css) for global styles
 - Modify Tailwind classes in components for styling changes
 - Adjust animation parameters in Framer Motion components
 
 ### Layout Configuration
 
-- Change masonry column width in `MasonryGrid` component
-- Adjust infinite scroll trigger distance in `useInfiniteScroll` hook
+- Change masonry column width in the [`ReactMasonryGrid.tsx`](./src/components/ReactMasonryGrid.tsx) component
+- Adjust infinite scroll trigger distance in the [`useInfiniteScroll.ts`](./src/hooks/useInfiniteScroll.ts) hook
 - Modify responsive breakpoints in CSS
 
 ## Performance Considerations

@@ -6,13 +6,13 @@ This guide explains the key techniques used to create the responsive, animated m
 
 The masonry functionality is primarily built from three key parts:
 
-1.  **`ReactMasonryGrid.tsx`**: The component responsible for the CSS-based masonry structure.
-2.  **`BlogLayout.tsx`**: The main layout that fetches data and orchestrates the grid and infinite scroll.
-3.  **`useInfiniteScroll.ts`**: A custom React Hook that handles the logic for loading more articles as the user scrolls.
+1.  **[`ReactMasonryGrid.tsx`](../src/components/ReactMasonryGrid.tsx)**: The component responsible for the CSS-based masonry structure.
+2.  **[`BlogLayout.tsx`](../src/components/BlogLayout.tsx)**: The main layout that fetches data and orchestrates the grid and infinite scroll.
+3.  **[`useInfiniteScroll.ts`](../src/hooks/useInfiniteScroll.ts)**: A custom React Hook that handles the logic for loading more articles as the user scrolls.
 
 ---
 
-### 1. `ReactMasonryGrid.tsx` - The CSS-Powered Grid
+### 1. [`ReactMasonryGrid.tsx`](../src/components/ReactMasonryGrid.tsx) - The CSS-Powered Grid
 
 The foundation of the layout is a CSS-only masonry implementation, which is highly performant because it avoids complex JavaScript-based position calculations.
 
@@ -52,11 +52,11 @@ export const ReactMasonryGrid: React.FC<MasonryLayoutProps> = ({
 
 - **`react-masonry-css` Library**: This lightweight library provides a simple React component that generates the necessary column-based structure for a masonry layout.
 - **`breakpointCols`**: This object defines the number of columns to display at different screen widths. For example, screens wider than `1100px` will have 3 columns, while screens between `700px` and `1100px` will have 2.
-- **CSS Styling (`globals.css`)**: The actual masonry effect is achieved with simple CSS. The `masonry-grid` class uses `display: flex;`, and each `masonry-grid_column` acts as a container for the items in that column.
+- **CSS Styling ([`globals.css`](../src/app/globals.css))**: The actual masonry effect is achieved with simple CSS. The `masonry-grid` class uses `display: flex;`, and each `masonry-grid_column` acts as a container for the items in that column.
 
 ---
 
-### 2. `BlogLayout.tsx` - Orchestrating the Content
+### 2. [`BlogLayout.tsx`](../src/components/BlogLayout.tsx) - Orchestrating the Content
 
 This component acts as the main container. It's responsible for fetching the articles and feeding them into the masonry grid.
 
@@ -99,11 +99,11 @@ export const BlogLayout: React.FC = () => {
 
 ---
 
-### 3. `useInfiniteScroll.ts` - The Infinite Scroll Logic
+### 3. [`useInfiniteScroll.ts`](../src/hooks/useInfiniteScroll.ts) - The Infinite Scroll Logic
 
 This custom hook encapsulates all the logic needed for infinite scrolling.
 
-```ts
+```tsx
 // src/hooks/useInfiniteScroll.ts
 
 // ... (imports)
