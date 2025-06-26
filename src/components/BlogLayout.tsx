@@ -81,8 +81,8 @@ export const BlogLayout: React.FC = () => {
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-[30px] py-8">
         <ReactMasonryGrid className="mb-8">
-          {articles.map((article) => (
-            <ArticleCard key={article.id} article={article} />
+          {articles.map((article, index) => (
+            <ArticleCard key={article.id} article={article} index={index} />
           ))}
         </ReactMasonryGrid>
 

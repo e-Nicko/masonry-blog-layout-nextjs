@@ -2,12 +2,14 @@
 
 import { Article } from "@/types/article";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 interface ArticleCardProps {
   article: Article;
+  index: number;
 }
 
-export const ArticleCard: React.FC<ArticleCardProps> = ({ article }) => {
+export const ArticleCard: React.FC<ArticleCardProps> = ({ article, index }) => {
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString("en-US", {
       year: "numeric",
@@ -17,7 +19,16 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({ article }) => {
   };
 
   return (
-    <article className="article-card bg-white rounded-xl shadow-md overflow-hidden cursor-pointer group w-full hover:shadow-lg transition-shadow duration-300">
+    <motion.article
+      className="article-card bg-white rounded-xl shadow-md overflow-hidden cursor-pointer group w-full hover:shadow-lg transition-shadow duration-300"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{
+        duration: 0.4,
+        delay: index * 0.05,
+        ease: "easeOut",
+      }}
+    >
       <div className="relative overflow-hidden h-48 w-full">
         <Image
           src={article.imageUrl}
@@ -70,6 +81,6 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({ article }) => {
           </span>
         </div>
       </div>
-    </article>
+    </motion.article>
   );
 };
