@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  basePath: '/masonry-blog',
   eslint: {
     ignoreDuringBuilds: true,
   },
